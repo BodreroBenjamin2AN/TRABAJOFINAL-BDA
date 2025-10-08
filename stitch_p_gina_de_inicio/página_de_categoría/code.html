@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0b73da",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Lexend"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-neutral-800 dark:text-neutral-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="border-b border-neutral-200/50 dark:border-neutral-700/50">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-neutral-900 dark:text-white" href="#">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-lg font-bold">FitFlex</h2>
+</a>
+<nav class="hidden items-center gap-8 lg:flex">
+<a class="text-sm font-medium hover:text-primary" href="#">New Arrivals</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Men</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Women</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Kids</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Accessories</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center justify-end gap-4">
+<div class="relative hidden sm:block">
+<span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<svg class="text-neutral-500 dark:text-neutral-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</span>
+<input class="w-full rounded-lg bg-neutral-100 dark:bg-neutral-800/50 py-2 pl-10 pr-4 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Search" value=""/>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-neutral-800/50 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-neutral-800/50 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="mx-auto w-full max-w-7xl flex-1 px-4 sm:px-6 lg:px-8 py-10">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col items-start gap-2">
+<h1 class="text-4xl font-bold text-neutral-900 dark:text-white">Footwear</h1>
+<p class="text-neutral-600 dark:text-neutral-400 max-w-2xl">
+              Explore our wide selection of athletic footwear for every sport and activity. Find the perfect fit for your performance needs.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-4">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-100 dark:bg-neutral-800/50 pl-4 pr-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800">
+<span>Price</span>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-100 dark:bg-neutral-800/50 pl-4 pr-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800">
+<span>Brand</span>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-100 dark:bg-neutral-800/50 pl-4 pr-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800">
+<span>Size</span>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
+</button>
+<div class="ml-auto">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-100 dark:bg-neutral-800/50 pl-4 pr-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800">
+<span>Sort by: Best Sellers</span>
+<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHLtcFWxPcMkOTRDfju6gIoTzY1S02VIDjaM0yyt_NLr3x2I5PMp62gGEY781IkC_q9BYHULfbFyKmmVsqqEmniJvHGIMuwnHHsH8rhTV9wl1RsfD6Q3uBXLX_fmYD2wvgHWQ22Nq-Bp3lfN3mNOtruLUJrloHUbfxu-eFwVWba0uXuuSrUI14zVjUk-rcgoUYI8hq8Rj11IV9KdYaddlytdthUK-nySyDqQCLUI1vG8qRSAbtKVnttp_e8RUAWr3XjrWD7C9s_kl9");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Performance Running Shoes</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Engineered for speed and comfort</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$120.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA54Yxwm-SNrbsZqKkQ0QYDbzsGw2NM4ZUyRom7KKW6E9EMfNxt_ULbEsKTQWNUM6ZtKAvhaTWDhNtRultrqmv6tbfuw7q5I0WK-iIPVqcEwCASVtjEf4wEAxQ6wk8yjSQ1liIe2leO31-l5jV4W_Okd_rH2H2o4OelDOBOIa_VK0yBF-wDEChOKXIKjDpo6eXPvEqxbjC_kFTcEP4cyCKBd-Z5d4g7bc1tpLzSxIB4vceBw21I3aZ0JDTptiXnEuBUUcT5BreXfD4t");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Trail Running Shoes</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Conquer any terrain with confidence</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$145.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjBVIp5De0QkLYcwhXuouttUP7aeTNcprJmgWyhWnwS3C7zkcSM90hQsNawEGZ2tRRCtKJiWpUmFCerH0dCGSqj0IxJ3Q8Z-EZtbSMDLDcBjACDqoM9TWoshzBC851g7xgdx4dMaIScr2lXQYGHvHfNQyom0TlP3n_axKy3zEg3ZP0fw7xXGsmysQq4Ots5esQ7LWfVmUUfOz9CRZ4LuY3mNFz7kHKOD_bvd_riTKcnBGEICtZSaKoXTDiL86JObDNCmFWu_Aqgjvt");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Cross-Training Shoes</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Versatile support for all workouts</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$95.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwmkqkR0Pnp2rPoz3JgF3B5wJhlljAta3F0klY8_XNIK7SWt0S26EdOEGZqQNTavQ02h8q8qgE02eoOPgsZrhLZrPr2IE_BUDJGc0yLo5_142QjIucKxpsDWSf-6lyJpduL1OMK8U4puv5J7AHnC5DG1zdwK1YXCWjA8FPE_S7udClw2LGY7Xh3ID8zf4Pzkb_dmZ3nNU9HDNas0ZktPZlzoyILYgBEB8lfLec1ipowwOsq0vbqGa0do3Y0HIsbbY1DlHgQvYxh0vC");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Basketball Shoes</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Dominate the court with style</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$160.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyNxBureR6bB2POSVo_50AlyXyUejlxTnjjwuU7zInCju5G_xEIEo3uGqW2mMnXxRyTlrj8BZKa3WxOaqXVvWR3c6GzZ9RIUc7ml2fINxltlYMizZ5sPri2przN1bJG3TKb4l86pWXhHI6fffazQXQshZDo46Zd95Z-H4xRb_TQfTd66Qwk5cGKNPFKGK4EaKmfD4TQ-_eT6OkPSpxmkUFSGzcpFP8L6YyfAe9QIFTvIynfLHkYIu4yJv3DEAyitmMj_KavVD9s2a8");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Soccer Cleats</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Precision and control on the field</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$130.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRmP2-Rs007XNLPI3Jcu9tLzN31E32vfDgeaudlOxSl8xgqdpthU4VMXRe6oJ309JzSfzsRrDm_Cl1BrMt7-WZN15IudGC-yko6A5Swjf---rQqD_DUwvGr46EsP5QEAkqbJgt-UzfbKqnufBmCwiqeJ9MeDnxtceHmFKsxK0w1AstmXQt3ie2hrDt6NvzTd2pil1_B82EARtVsa-LDRPJ_rL8WxwExUOOYK4LMGr02gxzNfGaDA8o51LUSZsI9aFbXKqf0MVEFPoC");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Tennis Shoes</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Agility and responsiveness for every match</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$110.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhkbhegJQnIA5Bmh2Y7sg2npgh4U-EwEogasuiUZylpI_yni6H8xWCTTqv_fE9JWc_-FDmZpUF-N8i7ikm_YYrA0YGtD_xmqw8uC6_89vUgavgRcffdDzLuLSPcpXfuqS6Fm1ncneya3c8hZwWKIqMscpJbxN5fRBv0Orh4vcV6r-byAWTelv5NYbvLQ87aCApy1STmkDT8OnVOeUPwkg3jb_CaJzZgi902EzksG9q5c7EVVnqtEczh7BZdwR08YBeIk-nJ8Jlsksq");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Golf Shoes</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Swing with power and precision</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$150.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHBHRC7mkPX-SrPyN8Ae0TsuYIciXxdm-WGUKqGSu7GkKa58hWlc_U3VfDBzdm8ZMgpKX31csfvtLJfA-eFAnoH0xW4TcfX7KGQ6jnqsuE8B0YY_Ba0Lgw7CFKAKcoEaH2HdEm9ooAsuI4RmMhNN9nAOGpFWMOf4LMaRlSgysuKLQ9C4zM_CGxzFsuE5poZszY9QrYrvVr92Kquf8QnhvfHKCe6FJM93FG05JqKYL_uw3DlgTRVfKsWPcymQN1X5RWrf--x7I1dlsT");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Hiking Boots</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Explore the great outdoors in comfort</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$180.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyw71XKEBHpeen4L9JdhtMwtLrzI12wiZ4TwZ02tYBkTmNVgE1NdMBwFMk5TZ1zBF1wvxliihcDGBRomPqakGirOyY31ncMCkD_CUcw1anG9QxOOTCNeSD8tqbivAUt301n6kM2wBLgYKWxP88CkXdym-aVRiS-WyhBX9x5VmdNGRVEsaJUdUiRWZaKgt6yMZwpyWNZCcV-4gG1mseuJzZliTfyLvIxOxMPD0kMZXucddi1GDdllDWActn4B97Gj0CDMHRJfWpjHYe");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Casual Sneakers</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Everyday style with athletic performance</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$85.00</p>
+</div>
+</div>
+<div class="group flex cursor-pointer flex-col gap-3">
+<div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjFZYoLYuxltL25RduIurjuTeSRg_OaqI8guPBXTMjU6QJk9MmrPtVajgZnwD2zatGsLwY3PGfMbGaNrrd7M78TZ4QfggAxVMUQIyjr1KPfWuhlacs4ZQFEIrIg3yxeyVNk0--qUDG6f5lYP0-92pH1p6KO0_IFfyVkknEno_tLWQJaKL9fkmeu2lVBYOVgFJCbFqJTcfsEdhUY4sxbvG5pKuLdtiwydHNe5ZtO2YaPH0ALKngSmb-l4X1CY2_JJlxBz3uOWtR_GAm");'></div>
+<div>
+<h3 class="font-medium text-neutral-800 dark:text-neutral-100 group-hover:text-primary">Sandals &amp; Slides</h3>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">Relax and recover in style</p>
+<p class="mt-1 font-semibold text-neutral-900 dark:text-white">$45.00</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-neutral-200/50 dark:border-neutral-700/50">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+<div class="flex flex-col items-center gap-8">
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary" href="#">About Us</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary" href="#">Contact</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary" href="#">FAQ</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary" href="#">Returns</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary" href="#">Shipping</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary" href="#">Terms of Service</a>
+</nav>
+<div class="flex justify-center gap-6">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-primary" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path>
+</svg>
+</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-primary" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+</svg>
+</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-primary" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+</svg>
+</a>
+</div>
+<p class="text-sm text-neutral-600 dark:text-neutral-400">© 2024 FitFlex. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FitZone - Shopping Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b73da",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-700/50 px-10 py-4">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-gray-900 dark:text-white">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-2xl font-bold">FitZone</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary" href="#">New Arrivals</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Men</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Women</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Accessories</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-background-light dark:bg-background-dark border border-gray-300 dark:border-gray-700/50 h-10 placeholder:text-gray-400 dark:placeholder:text-gray-500 pl-10 pr-4 text-sm font-normal" placeholder="Search" value=""/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-background-light dark:bg-background-dark/50 hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/20 dark:bg-primary/30 text-primary">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-5xl space-y-12">
+<div>
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
+<a class="hover:text-primary" href="#">Home</a>
+<span>/</span>
+<span class="font-medium text-gray-800 dark:text-gray-200">Shopping Cart</span>
+</div>
+<h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Shopping Cart</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2 space-y-6">
+<div class="hidden sm:grid grid-cols-12 gap-6 px-4 py-2 border-b border-gray-200 dark:border-gray-700/50 text-xs font-bold uppercase text-gray-500 dark:text-gray-400">
+<span class="col-span-6">Product</span>
+<span class="col-span-2 text-center">Price</span>
+<span class="col-span-2 text-center">Quantity</span>
+<span class="col-span-2 text-right">Subtotal</span>
+</div>
+<div class="grid grid-cols-12 items-center gap-6 p-4 border-b border-gray-200 dark:border-gray-700/50">
+<div class="col-span-12 sm:col-span-6 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFrhv9x2SzhcbGOKSr0dKg6pu64XDWy9-LAa9pMURUPRQM5EgvnL_eCg5kM6Ah-y4TE2R9GGOc8ns4hKuMP60wM3XaVRa1wlEJsyhoWUMjC5KtnIEorPKMJ8oW_cqDlWN41EVTybxwP50bWFMAh4i4i3COe4CND_CuYNmrolm5euxmuoWqpX_-bC6ti4NAFzwR85zuliMOhEMVwxXcuSyyBwxQ_Ddt-B2tx-wyr878IXvs-H4kF4QR2QWcZ46cR8Jg3QM-dOE6pGI9");'></div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Pro Running Shoes</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Men's, Size 10</p>
+</div>
+</div>
+<div class="col-span-4 sm:col-span-2 text-center font-medium">$120.00</div>
+<div class="col-span-4 sm:col-span-2 flex justify-center items-center gap-2">
+<button class="w-8 h-8 rounded-full flex items-center justify-center bg-background-light dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-600/50">-</button>
+<span class="w-8 text-center font-medium">1</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center bg-background-light dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-600/50">+</button>
+</div>
+<div class="col-span-4 sm:col-span-2 text-right font-bold text-gray-900 dark:text-white">$120.00</div>
+<div class="col-span-12 sm:col-span-12 flex justify-end">
+<button class="text-sm text-red-500 hover:underline">Remove</button>
+</div>
+</div>
+<div class="grid grid-cols-12 items-center gap-6 p-4 border-b border-gray-200 dark:border-gray-700/50">
+<div class="col-span-12 sm:col-span-6 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2V07RQ83BN9ewr7yKG303mvVfGcE4jRQByifb_zD_OdolBTCAhvLZKAY6QO8E1LabeWSoCmPUN-h7VI5nk26GOYZVFTU8TNP6rsukXsh_2cXHSKYVPqISH6MQlxEe19vlDa_S__caumZkQ_vhkP9i0bIpnxl9QS6zvUYcBaC1LkZIA1eTZaUWdtw2aIn-O0SfFh_rswQbhVtRa2Te58Sy3oDFpxwViVdMucf-BxoboXw5ZWp6TkNimvijV3ttSuHPyhK4jmOJCjMN");'></div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Yoga Mat</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Eco-friendly, Purple</p>
+</div>
+</div>
+<div class="col-span-4 sm:col-span-2 text-center font-medium">$30.00</div>
+<div class="col-span-4 sm:col-span-2 flex justify-center items-center gap-2">
+<button class="w-8 h-8 rounded-full flex items-center justify-center bg-background-light dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-600/50">-</button>
+<span class="w-8 text-center font-medium">2</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center bg-background-light dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-600/50">+</button>
+</div>
+<div class="col-span-4 sm:col-span-2 text-right font-bold text-gray-900 dark:text-white">$60.00</div>
+<div class="col-span-12 sm:col-span-12 flex justify-end">
+<button class="text-sm text-red-500 hover:underline">Remove</button>
+</div>
+</div>
+<div class="grid grid-cols-12 items-center gap-6 p-4 border-b border-gray-200 dark:border-gray-700/50">
+<div class="col-span-12 sm:col-span-6 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaCtNNnAsEL4zzkUa16U8k-lUgErsV3God6kik5P9lu5tIdGv2ZgEsOijveZWQEEuW9u6CyGwqulfK5YflW770U3I7mpYCZnQXsDgju1MoR7UBPjIQKW2xXS215cFLM3jkK94-Qpf1ihNutHafYKIu98IE2IeBuyxiLBH5pFPfPR_WX3IiRknlcz56xXsuTwRvxb5WLD0-R1u9Bu4u9wbYa4bMN2A4nKxqj_Dg9B7dErb393uvlBg3Qfq-yqfAA3BmYqUWLzyluyUW");'></div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Dumbbell Set</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">5kg, Pair</p>
+</div>
+</div>
+<div class="col-span-4 sm:col-span-2 text-center font-medium">$15.00</div>
+<div class="col-span-4 sm:col-span-2 flex justify-center items-center gap-2">
+<button class="w-8 h-8 rounded-full flex items-center justify-center bg-background-light dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-600/50">-</button>
+<span class="w-8 text-center font-medium">3</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center bg-background-light dark:bg-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-600/50">+</button>
+</div>
+<div class="col-span-4 sm:col-span-2 text-right font-bold text-gray-900 dark:text-white">$45.00</div>
+<div class="col-span-12 sm:col-span-12 flex justify-end">
+<button class="text-sm text-red-500 hover:underline">Remove</button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="bg-background-light dark:bg-background-dark/50 rounded-lg p-6 space-y-6 border border-gray-200 dark:border-gray-700/50">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Order Summary</h3>
+<div class="space-y-3 text-sm">
+<div class="flex justify-between">
+<span class="text-gray-600 dark:text-gray-300">Subtotal</span>
+<span class="font-medium text-gray-800 dark:text-gray-100">$225.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600 dark:text-gray-300">Shipping</span>
+<span class="font-medium text-gray-800 dark:text-gray-100">Free</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600 dark:text-gray-300">Tax</span>
+<span class="font-medium text-gray-800 dark:text-gray-100">$15.00</span>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700/50 pt-4">
+<div class="flex justify-between font-bold text-lg">
+<span>Total</span>
+<span>$240.00</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
+                                    Proceed to Checkout
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

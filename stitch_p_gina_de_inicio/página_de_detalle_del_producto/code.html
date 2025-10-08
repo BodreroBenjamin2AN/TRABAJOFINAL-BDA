@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FitFlex - Product Details</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0b73da",
+            "background-light": "#f5f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .font-display {
+      font-family: 'Lexend', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-20 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-xl font-bold">FitFlex</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Novedades</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Hombre</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Mujer</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Accesorios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Ofertas</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<label class="relative hidden sm:block">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<svg class="h-5 w-5 text-slate-400 dark:text-slate-500" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="form-input w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark/50 pl-10 pr-4 py-2 text-sm focus:border-primary focus:ring-primary" placeholder="Buscar" type="search"/>
+</label>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200/50 dark:bg-slate-800/50 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<svg class="h-5 w-5" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path></svg>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200/50 dark:bg-slate-800/50 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<svg class="h-5 w-5" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-12 xl:gap-16">
+<div class="lg:w-1/2">
+<div class="mb-4">
+<nav aria-label="Breadcrumb">
+<ol class="flex items-center gap-2 text-sm">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Inicio</a></li>
+<li><span class="text-slate-400 dark:text-slate-500">/</span></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Hombre</a></li>
+<li><span class="text-slate-400 dark:text-slate-500">/</span></li>
+<li class="font-medium text-slate-700 dark:text-slate-300">Ropa</li>
+</ol>
+</nav>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="col-span-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3qkGH7vCk2VXOBRU-tcEvrNtZl_rT_BmuCN8I9fBUfC_c1V6TtiBrFR8aUTQGg9ZT9qSntMdKuRB5VhJagEZrDJYh-JK1XUTG7LQTwWMquxr59svHBgDvPC6Ids-w0qGm1xY0neiPT042sm76i9NWLt-ePgujbvCWI7egtY-CADdtRDNb0X_Gj1yHORnMQrizHlemOSWiAP7TYCiauv1bAcUzH7mNd8o0Uw5JrhB6YPGQ1BQ6SAIIR4GlHV-Sr7ei_KsRsgFKzwoB');"></div>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBS7CFHUsh61dZqSSom4_Gwatkhn_nwcCxMwuMga5AGcvWlt15vnMO0aaV1K1_gwnach5FQX5a3jWeOuiFT4qxEqMdf1GqLCF4mb3tOOS-3rDZC_a8sC8akCxpU1hwtMMP56Q4DZGfOWM8tnuIL8L6DSLG6AAEBISqKiWBL7djCDoSzsi2W5ArvQlsfGzVYB41AD0hzpzhc1ITE7k6VBUs_UjCNY3dzQ9vgMFESsznx6bnbkPjSP2so258Y_nU5_x8uxCUhGyiAb__t');"></div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnvh679XMfRa72JX3BmR4gxT4-SMP0hqGtQ--XkqY2ofUUi0Cz80iUB4rBkWOca7PNpy8XtSHC6i7GdqQVlLOpoF1tGQQ4tvixgJBL33jk13Q8s7Of5xGLFqC7i1TXQpnZtmno67nx1N1eDZMMV15LXjyF7l92MyDBqkKr40aISRMu2coWElkmfi5s_osf2L_cr758JEnuHUjSka_wMSb_62qieXgv3TT9HuxeQZzMEaYdAkyn5qI8AJBiJKJWVyOIVrEHZbIRRyCZ');"></div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOWOkXzg5HXk_m27TqVH4MXlNrqxCInieVJ07xmhI2O2Wi5vj4HZ3P6Hgxio6ZKKSOxnpcb6ajBnM66tZU5Hu0j4cjdyg6mCs1Q_KX9Ve0-tv64MrCYSO61j7rzGDqnDNMzTM4Jg3Gu3bIUOpKRZ0wGc9KJa2CUHADJvEO0S65ktyEuNcCFh-2KbwF1G9y9KsLTU_mPYWSZnXvFRdow4n5JvY1g5BOys2JcYkr_j_5LNKJPdVadFsMVuwRQhrxIkO8XXiTNJZgu-Sw');"></div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="sticky top-28">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Camiseta de running para hombre</h1>
+<p class="text-2xl font-bold text-primary mb-4">35€</p>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Camiseta de running ligera y transpirable, ideal para entrenamientos intensos. Confeccionada con tejido de secado rápido para mantenerte cómodo y fresco. Disponible en varios colores y tallas.</p>
+<div class="mb-6">
+<h3 class="text-sm font-medium text-slate-900 dark:text-white mb-2">Selecciona color</h3>
+<div class="flex flex-wrap gap-3">
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="color-choice" type="radio" value="black"/>
+<div class="w-10 h-10 rounded-full bg-slate-900 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark peer-checked:ring-primary"></div>
+</label>
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only" name="color-choice" type="radio" value="white"/>
+<div class="w-10 h-10 rounded-full bg-white border border-slate-200 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark peer-checked:ring-primary"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="color-choice" type="radio" value="blue"/>
+<div class="w-10 h-10 rounded-full bg-blue-600 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark peer-checked:ring-primary"></div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="color-choice" type="radio" value="red"/>
+<div class="w-10 h-10 rounded-full bg-red-600 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark peer-checked:ring-primary"></div>
+</label>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-sm font-medium text-slate-900 dark:text-white">Selecciona talla</h3>
+<a class="text-sm font-medium text-primary hover:underline" href="#">Guía de tallas</a>
+</div>
+<div class="flex flex-wrap gap-3">
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="size-choice" type="radio" value="S"/>
+<div class="flex items-center justify-center w-12 h-10 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">S</div>
+</label>
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only" name="size-choice" type="radio" value="M"/>
+<div class="flex items-center justify-center w-12 h-10 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">M</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="size-choice" type="radio" value="L"/>
+<div class="flex items-center justify-center w-12 h-10 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">L</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="size-choice" type="radio" value="XL"/>
+<div class="flex items-center justify-center w-12 h-10 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">XL</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="size-choice" type="radio" value="XXL"/>
+<div class="flex items-center justify-center w-12 h-10 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary">XXL</div>
+</label>
+</div>
+</div>
+<button class="w-full h-12 px-6 rounded-lg bg-primary text-white font-bold text-base tracking-wide hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-colors">
+              Añadir al carrito
+            </button>
+</div>
+</div>
+</div>
+<div class="mt-16">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Productos relacionados</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col gap-3 group">
+<div class="relative overflow-hidden rounded-lg">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover transition-transform duration-300 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhWw3RWTNjzjNG07JFmQ18ZFV23JdQc-P4ZgxuZfDuejxX0YeYxzLbdrgRI0E3VwNO6PmwRTn76kyPXBrl5HpWElcs3sgzPC9rL9_193So5IYtI1vmXQJbUQ0hQMWY-KdtwLKf5u1hQ5rNXOyKGVDiex3RzzzXqvbE63JOLr5_1Mldyn-ZulKKLVxJJGlITfamjBXpAWAdCDguo32LuZcH5vz9ONVjdwl8bq4rKDkQzspyfjk4ujSB_JMZ0jhs2dnGbvU4MVAI9qtY');"></div>
+</div>
+<div>
+<h3 class="text-base font-medium text-slate-800 dark:text-slate-200">Pantalones cortos de running</h3>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">25€</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="relative overflow-hidden rounded-lg">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover transition-transform duration-300 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwzms3ZKZdDtw9SAr-i3-LuOtqXuxDIjnJ96Bp0L8jmaBTQJwaMr394NOQDRB-rdwKsJ4BbS8klUWfjmLqa2fcyHdsCjY0vVNPT9wfOPIXjOz4Hn-tW40XkY8X_uqn7nAiUHTl5MotAX2X8UxIllL7mVtVosoOPWjQOhgc0hTqovlEH59tMyzz3DQKGBUnfneNWrq32kH25eiDUD6P6TuYhchrJ6JVv7UQICNofic7uI-wTJRf1wGLOeMKMFhVOFjfPZ73I3FdvNGy');"></div>
+</div>
+<div>
+<h3 class="text-base font-medium text-slate-800 dark:text-slate-200">Zapatillas de running</h3>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">80€</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="relative overflow-hidden rounded-lg">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover transition-transform duration-300 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwtXqRW2daK2eVrdNdVJyOyASxL4MTgAWX3MWObu0wTsKEGyVhx7Llv7DG2y-_CvhoRudtd0K-m8JXCavqyuZaCtu4gxe-0ADFirImTDs91BlKsIIYsYAWs7cJLodz8PA5_OOyyGfLAYXlZgfhJxzryXgyk43ZnM0GbZSNz8yq26z9BFM7U14iPkuOsmOTiEyIOhzFMQmw-53BTCjUUObx4L0pi-Dw8jpfjRlbQ-maYrDnwYea-OPoLhGVN3lRDmOyGQHV1LbfwpYw');"></div>
+</div>
+<div>
+<h3 class="text-base font-medium text-slate-800 dark:text-slate-200">Gorra de running</h3>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">15€</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8">Reseñas de clientes</h2>
+<div class="space-y-8">
+<div class="flex flex-col gap-4 p-6 rounded-lg bg-slate-100 dark:bg-slate-800/50">
+<div class="flex items-center gap-4">
+<img alt="User avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0bycnqQg8PLn0tV_BTERwLB_BterZ4qaY9zIrDEZ5NgCRUmYnBEEqjh8Gygcqj4I-3N-JUmmxleikvrhhCb8volC9e5GOnei01jaKPHqgJUGAoWfQjSeTjEF_Uw0b6iyJKMacVbduo-N3EJ6kvYNSwFc6cXKjiejAQlE-kGODNpn-8bztgDZuKu93IDuO1FcNhaSblMJknjGcpc4OLIfn8MKlU6qkY471N5FfUir7yqh4u5oRYRG5djqDQTwZ6YU2eAVcFrvT-RcK"/>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white">Carlos</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">15 de mayo de 2024</p>
+</div>
+<div class="flex items-center gap-0.5 text-yellow-500">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-300">Excelente camiseta, muy cómoda y transpirable. Ideal para correr en verano.</p>
+</div>
+<div class="flex flex-col gap-4 p-6 rounded-lg bg-slate-100 dark:bg-slate-800/50">
+<div class="flex items-center gap-4">
+<img alt="User avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyoSJ2ylpRPqhfdauVM2ltIPedf9dDd8Veo5vFCSkshX_EtCGYLhQmVHbrNiRis-_cR4C0pRgRGg9trCR2fTHXeL3QIQqXwelx0QYLDPvZb2i1UGjnzC5s-pxZHehVav3fLGwhFItj15_TjYD1MKlF1350GSpZgmQsGK_MoWuneFQP9s9IhJMa5mp4i3I5ZDLHUSJLuo-JiW9Oc-FcpWSysYiqsTk6ilJuyU1t2KAcf5YuiNZ3JLT5pnCT2NUJFyaUyOZKeMfguGk"/>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white">Ana</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">20 de mayo de 2024</p>
+</div>
+<div class="flex items-center gap-0.5 text-yellow-500">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5 text-slate-300 dark:text-slate-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-300">Buena calidad, pero la talla es un poco grande. Recomiendo pedir una talla menos.</p>
+</div>
+<div class="flex flex-col gap-4 p-6 rounded-lg bg-slate-100 dark:bg-slate-800/50">
+<div class="flex items-center gap-4">
+<img alt="User avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyCOueBAfD6OWwDuLsDOesyoT8oTT6GWTppCNKO51iaXJUNz6b0wl5DDukiSFBxmyRDyK0uAx5Pe640kyZQnUgbBKhyDIc7A74Zx3IleRL07qcb3fpmoI1Q3edoGf4wCROfLgrZn6Uad4sk9yCmfd8u2ooAm1r4XqNUblT2Nnz0P1BIkUb2NSwGgCQTYCpRGDVGNJsAnxO-XBhTgb88MbUtKvTfJtYH6b1NtX6BIO7g2W4N8A8fVAS3pVo60RqNr42bmvfX2bWGJvc"/>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white">Javier</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">25 de mayo de 2024</p>
+</div>
+<div class="flex items-center gap-0.5 text-yellow-500">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path></svg>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-300">La mejor camiseta de running que he tenido. Ligera, cómoda y con un diseño moderno.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
