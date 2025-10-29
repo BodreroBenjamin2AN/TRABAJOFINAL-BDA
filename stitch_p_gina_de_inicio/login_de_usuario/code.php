@@ -1,3 +1,12 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$error = $_SESSION['login_error'] ?? null;
+$old_email = $_SESSION['old_email'] ?? '';
+unset($_SESSION['login_error'], $_SESSION['old_email']);
+?>
+
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/>
@@ -86,17 +95,29 @@
           </p>
 </div>
 <form action="login.php" method="POST" class="mt-8 space-y-6">
-<div class="rounded-lg -space-y-px">
-<div>
-<label class="sr-only" for="email-address">Email address</label>
-<input autocomplete="email" class="relative block w-full appearance-none rounded-t-lg border border-gray-300 dark:border-gray-700 px-3 py-3 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:z-10 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm" id="email-address" name="email" placeholder="Email address" required="" type="email"/>
-</div>
-<div>
-<label class="sr-only" for="password">Password</label>
-<input autocomplete="current-password" class="relative block w-full appearance-none rounded-b-lg border border-gray-300 dark:border-gray-700 px-3 py-3 bg-background-light dark:bg-gray-800 text-gray-900 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:z-10 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm" id="password" name="password" placeholder="Password" required="" type="password"/>
-</div>
-</div>
-<div class="flex items-center justify-between">
+    <?php if ($error): ?>
+        <div class="mb-4 text-sm text-red-700 bg-red-100 p-2 rounded">
+            <?php echo htmlspecialchars($error); ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- Campo email -->
+    <div>
+        <label for="email" class="sr-only">Email</label>
+        <input id="email" name="email" type="email" required
+               class="block w-full rounded-md border-gray-300 py-2 px-3"
+               value="<?php echo htmlspecialchars($old_email); ?>">
+    </div>
+
+    <!-- Campo password -->
+    <div>
+        <label for="password" class="sr-only">Contraseña</label>
+        <input id="password" name="password" type="password" required
+               class="block w-full rounded-md border-gray-300 py-2 px-3">
+    </div>
+
+    <!-- Resto del formulario / botón -->
+    <div class="flex items-center justify-between">
 <div class="flex items-center">
 <input class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary bg-background-light dark:bg-gray-800" id="remember-me" name="remember-me" type="checkbox"/>
 <label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="remember-me">Remember me</label>

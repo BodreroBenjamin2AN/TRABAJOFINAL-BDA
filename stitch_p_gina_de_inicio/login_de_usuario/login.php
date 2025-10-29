@@ -1,9 +1,9 @@
 <?php
 session_start();
-include '../../db.php'; // Ajusta la ruta si es necesario
+include '../db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'] ?? '';
+    $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
 
     $stmt = $conn->prepare("SELECT id, password FROM Usuario WHERE email = ?");
@@ -15,15 +15,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_result($id, $hash);
         $stmt->fetch();
         if (password_verify($password, $hash)) {
+            // Login correcto: limpiar errores previos y redirigir
+            unset($_SESSION['login_error'], $_SESSION['old_email']);
             $_SESSION['usuario_id'] = $id;
-            header("Location: ../página_de_inicio/code.html"); // Cambia la ruta a tu página de inicio
+            header("Location: ../página_de_inicio/code.php");
             exit();
         } else {
-            $error = "Contraseña incorrecta.";
+            $_SESSION['login_error'] = "Contraseña incorrecta.";
+            $_SESSION['old_email'] = $email;
         }
     } else {
-        $error = "Usuario no encontrado.";
+        $_SESSION['login_error'] = "Usuario no encontrado.";
+        $_SESSION['old_email'] = $email;
     }
+
     $stmt->close();
+    $conn->close();
+
+    // Volver al formulario para mostrar mensaje
+    header("Location: code.php");
+    exit();
 }
 ?>
