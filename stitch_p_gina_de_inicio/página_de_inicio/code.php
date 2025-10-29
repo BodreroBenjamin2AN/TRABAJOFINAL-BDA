@@ -34,10 +34,10 @@
 <svg class="text-primary size-7" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
 </svg>
-<h2 class="text-xl font-bold">SportZone</h2>
+<h2 class="text-xl font-bold">FitZone</h2>
 </div>
 <nav class="flex items-center gap-6 text-sm font-medium">
-<a class="hover:text-primary transition-colors" href="#">Novedades</a>
+<a class="hover:text-primary transition-colors" href="../drilldown_ejemplo.php">Drilldown</a>
 <a class="hover:text-primary transition-colors" href="#">Hombre</a>
 <a class="hover:text-primary transition-colors" href="#">Mujer</a>
 <a class="hover:text-primary transition-colors" href="#">Niños</a>

@@ -60,14 +60,6 @@ unset($_SESSION['login_error'], $_SESSION['old_email']);
 <span class="text-2xl font-bold text-gray-900 dark:text-white">FitZone</span>
 </div>
 </div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">New Arrivals</a>
-<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Men</a>
-<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Women</a>
-<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Kids</a>
-<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Accessories</a>
-<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Sale</a>
-</div>
 <div class="flex items-center space-x-4">
 <button class="p-2 rounded-lg bg-background-light dark:bg-background-dark hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300 transition-colors">
 <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
@@ -88,10 +80,10 @@ unset($_SESSION['login_error'], $_SESSION['old_email']);
 <div class="w-full max-w-md space-y-8 p-10 bg-white dark:bg-background-dark rounded-xl shadow-lg">
 <div>
 <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Welcome Back
+            Bienvenido a FitZone
           </h2>
 <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-            Sign in to continue to your account.
+            Inicia Sesion para continuar.
           </p>
 </div>
 <form action="login.php" method="POST" class="mt-8 space-y-6">
@@ -120,20 +112,20 @@ unset($_SESSION['login_error'], $_SESSION['old_email']);
     <div class="flex items-center justify-between">
 <div class="flex items-center">
 <input class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary bg-background-light dark:bg-gray-800" id="remember-me" name="remember-me" type="checkbox"/>
-<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="remember-me">Remember me</label>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="remember-me">Recuérdame</label>
 </div>
 <div class="text-sm">
-<a class="font-medium text-primary hover:text-primary/80" href="#">Forgot your password?</a>
+<a class="font-medium text-primary hover:text-primary/80" href="#">Olvidaste Tu Contraseña?</a>
 </div>
 </div>
 <div>
 <button class="group relative flex w-full justify-center rounded-lg border border-transparent bg-primary py-3 px-4 text-sm font-bold text-white hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark" type="submit">
-              Sign In
+              Inicia Sesión
             </button>
 </div>
 <div class="text-sm text-center">
 <a class="font-medium text-primary hover:text-primary/80" href="#">
-              Don't have an account? Sign up
+              No Tienes Una Cuenta? Regístrate
             </a>
 </div>
 </form>

@@ -23,6 +23,8 @@ CREATE TABLE IF NOT EXISTS Producto (
     nombre VARCHAR(100) NOT NULL,
     categoria_id INT,
     precio_unitario DECIMAL(10,2),
+    stock INT DEFAULT 0,
+    precio_compra_unitaria DECIMAL(10,2) DEFAULT 0.00,
     FOREIGN KEY (categoria_id) REFERENCES Categoria(id)
 );
 
