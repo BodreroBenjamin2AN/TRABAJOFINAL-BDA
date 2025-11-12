@@ -121,6 +121,7 @@ if (!isset($_GET['region'])) {
         }
     }
     echo '<h2>Ventas por Región</h2>';
+    echo '<a class="back" href="http://localhost/TRABAJOFINAL-BDA/stitch_p_gina_de_inicio/p%C3%A1gina_de_inicio/code.php">← Volver Al Menú</a>';
     echo '<div class="chart-container"><canvas id="regionChart"></canvas></div>';
     echo '<ul>';
     foreach ($regiones as $region => $sucursales) {
@@ -241,6 +242,48 @@ if ($sucursal && isset($regiones[$region][$sucursal])) {
             echo '<p>No hay compras registradas para este producto.</p>';
         }
         exit;
+    }
+    // Mostrar datos reales SOLO para la URL ?region=Santa+Fe&sucursal=Sur
+    if ($region === 'Santa Fe' && $sucursal === 'Sur') {
+        require_once __DIR__ . '/db.php';
+        try {
+            $sql = "SELECT p.nombre AS producto, SUM(v.cantidad) AS cantidad, SUM(v.total) AS total
+                    FROM Venta v
+                    JOIN Producto p ON p.id = v.producto_id
+                    GROUP BY p.id, p.nombre
+                    ORDER BY cantidad DESC";
+            $res = $conn->query($sql);
+            $rows = $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
+        } catch (Exception $e) {
+            $rows = [];
+        }
+        if (!empty($rows)) {
+            $labels = array_map(fn($r) => $r['producto'], $rows);
+            $cant   = array_map(fn($r) => (int)$r['cantidad'], $rows);
+            echo '<h2>Ventas por producto (datos reales)</h2>';
+            echo '<div class="chart-container"><canvas id="ventasProd"></canvas></div>';
+            echo '<ul>';
+            foreach ($rows as $r) {
+                echo '<li>' . htmlspecialchars($r['producto']) . ' — Cant: <strong>' . (int)$r['cantidad'] . '</strong> — Total: <strong>$' . number_format((float)$r['total'], 2) . '</strong></li>';
+            }
+            echo '</ul>';
+            echo '<script>
+                const ctxVP = document.getElementById("ventasProd").getContext("2d");
+                new Chart(ctxVP, {
+                    type: "bar",
+                    data: {
+                        labels: ' . json_encode($labels) . ',
+                        datasets: [{
+                            label: "Cantidad vendida",
+                            data: ' . json_encode($cant) . ',
+                            backgroundColor: "#0b73da"
+                        }]
+                    },
+                    options: {plugins: {legend: {display:false}}, scales: {y: {beginAtZero:true}}}
+                });
+            </script>';
+            echo '<hr style="margin:2rem 0;opacity:.25">';
+        }
     }
     echo '<a class="back" href="?region=' . urlencode($region) . '">← Volver a sucursales</a>';
     echo '<h2>Detalle de ' . htmlspecialchars($sucursal) . ' (' . htmlspecialchars($region) . ')</h2>';

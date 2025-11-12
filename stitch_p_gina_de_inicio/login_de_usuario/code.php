@@ -124,7 +124,7 @@ unset($_SESSION['login_error'], $_SESSION['old_email']);
             </button>
 </div>
 <div class="text-sm text-center">
-<a class="font-medium text-primary hover:text-primary/80" href="#">
+<a class="font-medium text-primary hover:text-primary/80" href="register.php">
               No Tienes Una Cuenta? Regístrate
             </a>
 </div>
