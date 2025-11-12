@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS Producto (
     categoria_id INT,
     precio_unitario DECIMAL(10,2),
     stock INT DEFAULT 0,
+    stock_inicial INT DEFAULT 0,
     precio_compra_unitaria DECIMAL(10,2) DEFAULT 0.00,
     FOREIGN KEY (categoria_id) REFERENCES Categoria(id)
 );
@@ -40,11 +41,13 @@ CREATE TABLE IF NOT EXISTS Venta (
     fecha DATE,
     sucursal_id INT,
     cliente_id INT,
+    usuario_id INT,
     producto_id INT,
     cantidad INT,
     total DECIMAL(10,2),
     FOREIGN KEY (sucursal_id) REFERENCES Sucursal(id),
     FOREIGN KEY (cliente_id) REFERENCES Cliente(id),
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id),
     FOREIGN KEY (producto_id) REFERENCES Producto(id)
 );
 

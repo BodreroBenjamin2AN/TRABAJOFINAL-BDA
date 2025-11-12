@@ -49,8 +49,9 @@ $conn->begin_transaction();
 
 try {
     // Preparar statements según esquema actual de `Venta`
-    // Insertaremos una fila por ítem comprado (fecha, producto_id, cantidad, total)
-    $stmt_insert = $conn->prepare("INSERT INTO Venta (fecha, producto_id, cantidad, total) VALUES (?, ?, ?, ?)");
+    // Insertaremos una fila por ítem comprado (fecha, usuario_id, producto_id, cantidad, total)
+    // Usamos usuario_id para vincular la compra con el usuario logueado
+    $stmt_insert = $conn->prepare("INSERT INTO Venta (fecha, usuario_id, producto_id, cantidad, total) VALUES (?, ?, ?, ?, ?)");
     $stmt_stock  = $conn->prepare("UPDATE Producto SET stock = stock - ? WHERE id = ?");
 
     foreach ($carrito as $item) {
@@ -60,8 +61,8 @@ try {
         $subtotal    = $precio * $cantidad;
         $total_venta += $subtotal;
 
-        // Insertar registro de venta (usando columnas presentes en schema.sql)
-        $stmt_insert->bind_param('siid', $fecha_venta, $id_producto, $cantidad, $subtotal);
+        // Insertar registro de venta con el usuario que compra
+        $stmt_insert->bind_param('siiid', $fecha_venta, $id_usuario, $id_producto, $cantidad, $subtotal);
         $stmt_insert->execute();
         $last_id = $stmt_insert->insert_id; // usaremos el último como número de pedido
 
